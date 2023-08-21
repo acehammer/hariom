@@ -1,63 +1,314 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-}
+    background-color: var(--primary-color);
+    color:  var(--secondary-color);
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+  }
+  
+  /* Header Styles */
+  
+  header {
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #club-name {
+    font-size: 50px;
+    transition: all 0.5s;
+  }
+  
+  #logo {
+    width: 200px;
+    /*height: 200px;*/
+    margin-bottom: 1px;
+    transition: all 0.5s;
+  }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
+  #scroll-logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    font-size: 18px;
+    transition: all 0.5s;
 }
-
-/* Header Styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.logo {
+  /*#logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
     font-size: 24px;
     font-weight: bold;
-}
+    margin-bottom: 1px;
+    transition: all 0.5s;
+}*/
 
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-right: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-
-/* Other section styles */
-/* Define your styles for other sections here */
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
+  
+  /* Hero Styles */
+  .hero {
+    background-image: url('images/aa.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
     text-align: center;
-    padding: 20px 0;
-}
+    color: #fff;
+    animation: fade-in 1s ease-in-out;
+    background-attachment: fixed;
+  }
+  
+  .hero-content {
+    animation: fade-in 2s ease-in-out;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+  
+  #about {
+    background-color: var(--primary-color);
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .about-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .malak img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  
+  .club-info {
+    margin-top: 30px;
+  }
+  
+  .club-info h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .club-info p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    flex: 0 0 200px;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .team-member p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* About Section Styles */
+  .about {
+    padding: 50px;
+    text-align: center;
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  .members {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .member {
+    text-align: center;
+  }
+  
+  .member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .member-info {
+    margin-top: 10px;
+  }
+  
+  
+  .highlighted {
+    font-size: 20px;
+  }
+  
+  /* Gallery Section Styles */
+  .gallery {
+    padding: 50px;
+    text-align: center;
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  .image-overlay {
+    position: centre;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .gallery-item:hover .image-overlay {
+    opacity: 1;
+  }
+  
+  /* Contact Section Styles */
+  .contact {
+    padding: 20px;
+    text-align: center;
+    animation: fade-in 1s ease-in-out;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #242424;
+    padding: 20px;
+    text-align: center;
+    color: #777777;
+  }
+  
+  :root {
+    --primary-color: #c8e2dc;     /* Day mode background color */
+    --secondary-color: #0b5043;   /* Day mode icon color */
+  }
+  
+  .dark-theme {
+    --primary-color: #151f41;     /* Night mode background color */
+    --secondary-color: #38c2cf;   /* Night mode icon color */
+  }
+  
+  #icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--primary-color);
+  }
+  
+  #icon i {
+    color: var(--secondary-color);
+  }
+  
+  #contact {
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    text-align: center;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .contact-item {
+    width: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    border-radius: 6px;
+  }
+  
+  .contact-item i {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+  }
+  
+  .contact-item p {
+    margin-bottom: 0;
+  }
+   
+  /* Animations */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateY(-100px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
